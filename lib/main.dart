@@ -101,17 +101,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   });
                 },
                 trailing: Expanded(
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Padding(
-                      padding: const EdgeInsets.only(bottom: 8.0),
-                      child: IconButton(
-                          icon: const Icon(Icons.menu),
-                          onPressed: () {
-                            setState(() {
-                              extended = !extended;
-                            });
-                          }),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Card(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 1),
+                          child: IconButton(
+                              icon: const Icon(Icons.menu),
+                              onPressed: () {
+                                setState(() {
+                                  extended = !extended;
+                                });
+                              }),
+                        ),
+                      ),
                     ),
                   ),
                 ),
